@@ -11,7 +11,7 @@ int partition(int A[], int low, int high)
 
     do       //minimum 1 time it should execute
     {
-        while (A[i] <= pivot)
+        while ((i<=j)&&A[i] <= pivot)
         {
             i++;
         }
@@ -27,7 +27,7 @@ int partition(int A[], int low, int high)
             A[i] = A[j];
             A[j] = temp;
         }
-    } while (i < j);
+    } while (i <= j);
 
     // Swap A[low] and A[j] ...in this pivot element is exchanged with a[j] as j>=i
     temp = A[low];//dont use pivot here because it wont reflect changes in main fn
